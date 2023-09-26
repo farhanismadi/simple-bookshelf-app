@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>Bookshelf Apps</h1>
+    </nav>
+
+    <main>
+      <img src="./images/Header-img.png" alt="Bookshelf-bg" />
+      <section class="form">
+        <h2>MASUKAN BUKU</h2>
+        <form id="formTambahBuku">
+          <input
+            type="text"
+            id="titleInput"
+            placeholder="Masukan Judul Belum"
+            maxlength="50"
+          />
+          <input
+            type="text"
+            id="authorInput"
+            placeholder="Masukan Nama Penulis"
+          />
+          <input
+            type="number"
+            id="yearInput"
+            placeholder="Masukan Tahun Terbit"
+          />
+          <div class="checkbox">
+            <label for="isComplete">Selesai dibaca</label>
+            <input type="checkbox" id="isComplete" />
+          </div>
+          <button type="submit">Tambahkan</button>
+        </form>
+      </section>
+
+      <section class="semua-buku">
+        <h2>SEMUA BUKU</h2>
+        <div class="status">
+          <div class="belum-dibaca">
+            <h2>Belum Selesai Dibaca</h2>
+            <input
+              type="text"
+              id="filterBelumSelesai"
+              placeholder="Cari buku..."
+            />
+            <div id="belumSelesaiDibaca"></div>
+          </div>
+
+          <div class="selesai-dibaca">
+            <h2>Selesai Dibaca</h2>
+            <input type="text" id="filterSelesai" placeholder="Cari buku..." />
+            <div id="selesaiDibaca"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/main.js"></script>
+  </body>
+</html>

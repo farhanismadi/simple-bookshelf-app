@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background-color: #dad7ce;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: #c35e4c;
+  position: fixed;
+  width: 100vw;
+  padding: 0.5rem 0;
+  border-radius: 0px 0px 40px 40px;
+  margin: 0;
+  top: 0;
+}
+
+nav h1 {
+  font-size: 2rem;
+  font-family: "Abril Fatface", cursive;
+  color: #ffff;
+}
+
+main img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 500px;
+  z-index: -999;
+  object-fit: cover;
+}
+
+.form {
+  background-color: #c35e4c;
+  margin: 7rem auto 4rem auto;
+  padding: 1rem 3em;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  border-radius: 10px;
+}
+
+.form h2 {
+  color: #ffff;
+  font-family: "Open Sans";
+  margin: 0 0 30px 0;
+}
+
+form input[type="text"],
+input[type="number"] {
+  padding: 0.8rem 0;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
+  border: none;
+  margin: 0.8rem 0;
+  text-align: center;
+}
+
+.checkbox label {
+  color: #ffff;
+  font-family: "Open Sans";
+}
+
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 2px solid #555555;
+  border-radius: 3px;
+  background-color: white;
+}
+
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+
+.form button {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 0.5rem 0;
+  margin: 1rem 0 0 0;
+  border-radius: 10px;
+  border: none;
+  background-color: #2a221f;
+  color: #ffff;
+  transition: 0.5s;
+}
+
+.form button:hover {
+  background-color: #ffffff;
+  color: #2a221f;
+}
+
+.semua-buku {
+  background-color: #c35e4c;
+  width: 82.5%;
+  margin: auto auto 5rem auto;
+  padding: 1rem 0;
+  border-radius: 10px;
+}
+
+.semua-buku h2 {
+  color: #ffff;
+  font-family: "Open Sans";
+  margin: 0 0 1rem 0;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 1rem 3em;
+}
+
+.belum-dibaca,
+.selesai-dibaca {
+  background-color: #dad7ce;
+  width: 50%;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.belum-dibaca h2,
+.selesai-dibaca h2 {
+  color: #2a221f;
+}
+
+.belum-dibaca input,
+.selesai-dibaca input {
+  padding: 0.5rem 0;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
+  border: none;
+  margin: 0.8rem 0;
+  text-align: center;
+}
+
+.buku {
+  background-color: #a3857a;
+  display: flex;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #ffffff;
+  width: auto;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.deskrispsi-buku {
+  text-align: start;
+  font-family: "Open Sans";
+}
+
+.deskrispsi-buku .button {
+  gap: 0.5rem;
+  display: flex;
+}
+
+.button .btn {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+}
+
+.btn-hapus {
+  background-color: #c35e4c;
+  color: #ffff;
+}
+
+.btn:hover {
+  background-color: #2a221f;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    background-color: #c35e4c;
+    margin: 7rem auto 4rem auto;
+    padding: 1rem 3em;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    border-radius: 10px;
+  }
+
+  .status {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .belum-dibaca,
+  .selesai-dibaca {
+    width: auto;
+  }
+
+  .deskrispsi-buku .button {
+    display: flex;
+    flex-direction: column;
+  }
+}
